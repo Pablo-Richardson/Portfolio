@@ -148,6 +148,26 @@ nav {
     border-radius: 15px;
 }
 
+#videos {
+  text-align: center;
+}
+
+.video-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.video-wrapper iframe {
+  flex: 1 1 500px;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
 body.dark-mode {
     background-color: rgb(31, 31, 31);
     color: #cbcbcb;
