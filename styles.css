@@ -1,0 +1,213 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-content .nav-links a {
+    font-size: 1.1rem;
+    padding: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-content .name a {
+    font-size: 3rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+#home h1, #home p, .rbutton {
+    margin-bottom: 2rem;
+}
+
+#home {
+    text-align: center;
+    padding-top: 10rem;
+    padding-bottom: 21.2rem;
+    background: linear-gradient(135deg, #c3cfe2 0%, #e2b3d6 100%);
+}
+
+#home h1 {
+    font-size: 3rem;
+}
+
+#home p {
+    color: #3b3b3b;
+    font-size: 1.7rem;
+}
+
+.rbutton {
+    font-size: 1.4rem;
+    display: inline-block;
+    padding: 15px 24px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#about {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-top: 10px;
+    margin-top: 30px;
+}
+
+.textBoxes {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.textBox {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+    padding: 0 50px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.267);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 180px;
+}
+
+.textBoxResults h3, .textBoxResults p {
+    margin: 0;
+}
+
+.textBoxResults {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+    padding: 0 50px;
+    background-color: #ffffff;
+    color: #0f0f0f;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.267);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80px;
+    max-height: 80px;
+}
+
+#results {
+    text-align: center;
+    margin-top: 80px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 1.3rem;
+}
+
+#projects {
+    text-align: center;
+    margin-top: 80px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 1.3rem;
+    margin-bottom: 100px;
+}
+
+.darkbtn {
+    padding: 12px 27px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    border-radius: 15px;
+}
+
+body.dark-mode {
+    background-color: rgb(31, 31, 31);
+    color: #cbcbcb;
+}
+
+body.dark-mode #home p {
+    color: #cbcbcb;
+    font-size: 1.7rem;
+}
+
+body.dark-mode .rbutton {
+    background-color: #dcdcdc;
+    color: #414141;
+}
+
+body.dark-mode nav {
+    background: rgba(37, 37, 37, 0.856);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.175);
+}
+
+body.dark-mode .nav-content .nav-links a {
+    color: #cbcbcb;
+}
+
+body.dark-mode .nav-content .name a {
+    color: #cbcbcb;
+}
+
+body.dark-mode .darkbtn {
+    color: #cbcbcb;
+    background-color: #333;
+}
+
+body.dark-mode #home {
+    background-image: linear-gradient(315deg, #2b4162 0%, #12100e 74%);
+}
+
+body.dark-mode .textBox {
+    background-color: #cbcbcb;
+    color: #0f0f0f;
+}
+
+body.dark-mode .textBoxResults {
+    background-color: #cbcbcb;
+    color: #0f0f0f;
+}
+
+body.dark-mode h1 {
+    color: #e0e0e0;
+}
+
+.server-section {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.seperator {
+    margin-right: 10px;
+}
+
+.last-section-buffer {
+    padding-bottom: 100px;
+}
