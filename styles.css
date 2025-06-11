@@ -354,3 +354,7 @@ body.dark-mode .buttons button:nth-child(15):hover, body.dark-mode .buttons butt
 .last-section-buffer {
     padding-bottom: 100px;
 }
+
+.small-buffer{
+    padding-bottom: 20px;
+}
