@@ -291,6 +291,7 @@ body.dark-mode .nav-content .nav-links a, body.dark-mode .nav-content .name a {
 body.dark-mode .darkbtn {
     color: #cbcbcb;
     background-color: #333;
+    border-style: hidden;
 }
 
 body.dark-mode .textBox, body.dark-mode .textBoxResults {
