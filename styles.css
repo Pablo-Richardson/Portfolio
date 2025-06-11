@@ -83,7 +83,7 @@ nav {
     text-decoration: none;
 }
 
-#about, #results, #projects, #videos {
+#about, #results, #projects, #videos, #calculator {
     font-size: 1.3rem;
     text-align: center;
     margin-left: 50px;
@@ -177,6 +177,88 @@ nav {
     box-shadow: 0 8px 32px rgba(0,0,0,0.25);
 }
 
+/* Calculator Container */
+.calculator {
+    background: #f7f7f7;
+    border-radius: 25px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    padding: 32px 24px 24px 24px;
+    max-width: 340px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#display {
+    width: 100%;
+    height: 48px;
+    border-radius: 12px;
+    border: none;
+    background: #eaeaea;
+    color: #222;
+    font-size: 2rem;
+    text-align: right;
+    margin-bottom: 24px;
+    padding: 0 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    outline: none;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    grid-gap: 18px;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+.buttons button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background: #333;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    transition: background 0.2s, transform 0.1s;
+    cursor: pointer;
+    outline: none;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons button:hover, .buttons button:active {
+    background: #ffb347;
+    color: #222;
+    transform: scale(1.08);
+}
+
+/* Special Button Styles */
+.buttons button:nth-child(1) { /* Clear button */
+    background: #e57373;
+    color: #fff;
+}
+.buttons button:nth-child(1):hover, .buttons button:nth-child(1):active {
+    background: #ff5252;
+    color: #fff;
+}
+.buttons button:nth-child(15) { /* Equals button */
+    background: #4caf50;
+    color: #fff;
+}
+.buttons button:nth-child(15):hover, .buttons button:nth-child(15):active {
+    background: #388e3c;
+    color: #fff;
+}
+
 /* Dark Mode */
 body.dark-mode {
     background-color: rgb(31, 31, 31);
@@ -226,6 +308,47 @@ body.dark-mode .rbutton:hover, body.dark-mode.rbutton:focus {
     box-shadow: 0 4px 20px rgba(155, 155, 155, 0.3);
     transform: scale(1.06);
     text-decoration: none;
+}
+
+body.dark-mode .calculator {
+    background: #181920; 
+    border-radius: 25px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+
+body.dark-mode #display {
+    background: #23242a;
+    color: #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+body.dark-mode .buttons button {
+    background: #42444d;
+    color: #ffb347;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+body.dark-mode .buttons button:hover, body.dark-mode .buttons button:active {
+    background: #ffb347;
+    color: #42444d;
+    transform: scale(1.08);
+}
+
+body.dark-mode .buttons button:nth-child(1) { 
+    background: #b23c3c;
+    color: #fff;
+}
+body.dark-mode .buttons button:nth-child(1):hover, body.dark-mode .buttons button:nth-child(1):active {
+    background: #ff5252;
+    color: #fff;
+}
+body.dark-mode .buttons button:nth-child(15) { 
+    background: #388e3c;
+    color: #fff;
+}
+body.dark-mode .buttons button:nth-child(15):hover, body.dark-mode .buttons button:nth-child(15):active {
+    background: #2e7031;
+    color: #fff;
 }
 
 .last-section-buffer {
