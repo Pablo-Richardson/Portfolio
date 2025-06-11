@@ -18,10 +18,18 @@ function changeMessage()
 {
     messages = 
     [
-        "Easter Egg",
+        "Hello World!",
         "Welcome to my Portfolio"
     ]
-    document.getElementById('button_change_text').textContent = messages[clickCount]
+    randNum = Math.floor(Math.random() * 10);
+    if(randNum === 5)
+    {
+        document.getElementById('button_change_text').textContent = "You found an Easter Egg!";
+    }
+    else
+    {
+        document.getElementById('button_change_text').textContent = messages[clickCount];
+    }
     clickCount ++;
     if(clickCount === messages.length)
     {
