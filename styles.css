@@ -255,7 +255,7 @@ nav {
     color: #fff;
 }
 .buttons button:nth-child(15):hover, .buttons button:nth-child(15):active {
-    background: #388e3c;
+    background: rgb(80, 193, 85);
     color: #fff;
 }
 
@@ -347,7 +347,7 @@ body.dark-mode .buttons button:nth-child(15) {
     color: #fff;
 }
 body.dark-mode .buttons button:nth-child(15):hover, body.dark-mode .buttons button:nth-child(15):active {
-    background: #2e7031;
+    background: rgb(80, 193, 85);
     color: #fff;
 }
 

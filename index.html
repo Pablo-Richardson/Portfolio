@@ -4,17 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Link to external JavaScript file -->
     <script src="script.js"></script>
 </head>
 <body>
+    <!-- Navigation Bar -->
     <nav>
         <div class="nav-content">
             <div class="name">
+                <!-- Home link with name -->
                 <a href="#home">Pablo Richardson</a>
             </div>
             <div class="nav-links">
+                <!-- Dark mode toggle button -->
                 <button id="darkModeButton" class="darkbtn" onclick="toggleDarkMode()">Dark Mode</button>
+                <!-- Navigation links -->
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>
@@ -22,13 +28,17 @@
             </div>
         </div>
     </nav>
+    <!-- Home Section -->
     <section id="home" class="section">
         <div class="container">
-            <h1 id="button_change_text" onclick="changeMessage()">Welcome to My Portfolio</h1>
+            <!-- Changes text when you click it -->
+            <h1 id="button_change_text" onclick="changeMessage()">Welcome to my Portfolio</h1>
             <p>I am a student passionate about Aviation and Computer Science</p>
+            <!-- Link to resume PDF -->
             <a href="resume.pdf" class="rbutton">View Resume</a>
         </div>
     </section>
+    <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
             <h1>About Me</h1>
@@ -48,25 +58,30 @@
             </div>
         </div>
     </section>
+    <!-- Projects Section -->
     <section id="projects" class="section">
         <div class="container">
             <h1>Projects</h1>
             <div class="textBoxes">
                 <div class="textBoxResults">
                     <h3>DCS Modding Guide</h3>
+                    <!-- External link to EFM Guide -->
                     <a href="https://docs.google.com/document/d/1n3RZkRSckOGxgCAFjWAAoPCTamej6hsfszYObVCgt_4/edit?usp=sharing">See Document</a>
                 </div>
                 <div class="textBoxResults">
                     <h3>C-2A EFM Repository</h3>
+                    <!-- External link to GitHub repository -->
                     <a href="https://github.com/Pablo-Richardson/C-2A-EFM">See Repository</a>
                 </div>
             </div>
         </div>
     </section>
+    <!-- GCSE/IGCSE Results Section -->
     <section id="results" class="section">
         <div class="container">
             <h1>GCSE/IGCSE Results</h1>
             <div class="textBoxes">
+                <!-- Each subject and grade -->
                 <div class="textBoxResults">
                     <h3>Mathematics</h3>
                     <p>9</p>
@@ -120,6 +135,7 @@
             </div>
         </div>
     </section>
+    <!-- A Level Predicted Grades Section -->
     <section id="results" class="section">
         <div class="container">
             <h1>A Level Preditcted Grades</h1>
@@ -143,10 +159,12 @@
             </div>
         </div>
     </section>
+    <!-- Videos Section -->
     <section id="videos" class="section">
         <h1>My Videos</h1>
         <div class="container">
             <div class="video-wrapper">
+                <!-- YouTube videos -->
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/APccM97wmFo?si=Ofk5abcRRLmmkAzM"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -158,13 +176,15 @@
             </div>
         </div>
     </section>
-    <!-- Making a calculator -->
+    <!-- Calculator Section -->
     <section id = "calculator" class = "section">
         <div class="container">
             <h1>Calculator</h1>
             <div class="calculator">
+                <!-- Calculator display -->
                 <input type="text" id="display" disabled>
                 <div class="buttons">
+                    <!-- Calculator buttons -->
                     <button onclick="clearDisplay()">C</button>
                     <button onclick="appendToDisplay('7')">7</button>
                     <button onclick="appendToDisplay('8')">8</button>
@@ -185,6 +205,7 @@
             </div>
         </div>
     </section>
+    <!-- Buffer section for spacing at the end -->
     <section class = "last-section-buffer"></section>
 </body>
 </html>

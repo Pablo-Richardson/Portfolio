@@ -18,8 +18,8 @@ function changeMessage()
 {
     messages = 
     [
-        "Test",
-        "Change"
+        "Easter Egg",
+        "Welcome to my Portfolio"
     ]
     document.getElementById('button_change_text').textContent = messages[clickCount]
     clickCount ++;
