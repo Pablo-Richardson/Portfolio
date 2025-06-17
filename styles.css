@@ -83,7 +83,7 @@ nav {
     text-decoration: none;
 }
 
-#about, #results, #projects, #videos, #calculator {
+#about, #results, #projects, #videos, #calculator, #screenshots {
     font-size: 1.3rem;
     text-align: center;
     margin-left: 50px;
@@ -95,7 +95,7 @@ nav {
     margin-bottom: 100px;
 }
 
-#results, #projects, #videos {
+#results, #projects, #videos, #calculator, #screenshots {
     margin-top: 80px;
 }
 
@@ -122,23 +122,34 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.textBoxParagraph{
+    min-height: 500px;
+    flex: 1;
+    margin: 0 10px;
+    padding: 0 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.267);
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    color: #000000;
 }
 
 .textBox {
-    background-color: #ffffff;
-    color: #000000;
     min-height: 180px;
 }
 
-.textBox:hover, .textBoxResults:hover {
+.textBox:hover, .textBoxResults:hover, .textBoxParagraph:hover {
     transform: translateY(-5px) scale(1.03);
     box-shadow: 0 8px 24px rgba(0,0,0,0.18);
     z-index: 1;
 }
 
 .textBoxResults {
-    background-color: #ffffff;
-    color: #0f0f0f;
     min-height: 80px;
     max-height: 80px;
 }
@@ -177,7 +188,6 @@ nav {
     box-shadow: 0 8px 32px rgba(0,0,0,0.25);
 }
 
-/* Calculator Container */
 .calculator {
     background: #f7f7f7;
     border-radius: 25px;
@@ -241,7 +251,6 @@ nav {
     transform: scale(1.08);
 }
 
-/* Special Button Styles */
 .buttons button:nth-child(1) { /* Clear button */
     background: #e57373;
     color: #fff;
@@ -257,6 +266,21 @@ nav {
 .buttons button:nth-child(15):hover, .buttons button:nth-child(15):active {
     background: rgb(80, 193, 85);
     color: #fff;
+}
+
+.image-row {
+  display: flex;
+  justify-content: center; 
+}
+
+.image-row img {
+  max-width: 600px;
+  max-height: 450px;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  border: 1px solid #e0e0e0;
+  background: #fafafa;
 }
 
 /* Dark Mode */
