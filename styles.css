@@ -318,7 +318,7 @@ body.dark-mode .darkbtn {
     border-style: hidden;
 }
 
-body.dark-mode .textBox, body.dark-mode .textBoxResults {
+body.dark-mode .textBox, body.dark-mode .textBoxResults, body.dark-mode .textBoxParagraph {
     background-color: #cbcbcb;
     color: #0f0f0f;
 }
@@ -374,6 +374,12 @@ body.dark-mode .buttons button:nth-child(15) {
 body.dark-mode .buttons button:nth-child(15):hover, body.dark-mode .buttons button:nth-child(15):active {
     background: rgb(80, 193, 85);
     color: #fff;
+}
+
+body.dark-mode .image-row img {
+    box-shadow: 0 2px 12px rgba(0,0,0,0.45);
+    border: 1px solid #444;
+    background: #23242a;
 }
 
 .last-section-buffer {
