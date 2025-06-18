@@ -13,6 +13,19 @@ html, body {
     min-height: 100%;
 }
 
+.section {
+    scroll-margin-top: 117px;
+    opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s forwards;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 nav {
     position: fixed;
     width: 100%;
@@ -283,6 +296,51 @@ nav {
   background: #fafafa;
 }
 
+.secondary-btn {
+    font-size: 1.08rem;
+    display: inline-block;
+    padding: 12px 32px;
+    background: linear-gradient(90deg, #f5f6fa 0%, #e3e6ee 100%);
+    color: #222;
+    border-radius: 999px;
+    border: 1.5px solid #d1d5db;
+    text-decoration: none;
+    box-shadow: 0 2px 12px rgba(60, 60, 60, 0.07);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: 
+        background 0.25s,
+        color 0.18s,
+        box-shadow 0.18s,
+        border-color 0.18s,
+        transform 0.13s;
+}
+
+.secondary-btn:hover, .secondary-btn:focus {
+    background: linear-gradient(90deg, #e3e6ee 0%, #f5f6fa 100%);
+    color: #111;
+    border-color: #bdbdbd;
+    box-shadow: 0 6px 24px rgba(60, 60, 60, 0.13);
+    transform: translateY(-2px) scale(1.04);
+    text-decoration: none;
+}
+
+body.dark-mode .secondary-btn {
+    background: linear-gradient(90deg, #23242a 0%, #35363c 100%);
+    color: #cbcbcb;
+    border: 1.5px solid #444;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.22);
+}
+
+body.dark-mode .secondary-btn:hover, body.dark-mode .secondary-btn:focus {
+    background: linear-gradient(90deg, #35363c 0%, #23242a 100%);
+    color: #fff;
+    border-color: #666;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.33);
+    transform: translateY(-2px) scale(1.04);
+    text-decoration: none;
+}
+
 /* Dark Mode */
 body.dark-mode {
     background-color: rgb(31, 31, 31);
@@ -382,6 +440,18 @@ body.dark-mode .image-row img {
     background: #23242a;
 }
 
+body.dark-mode .secondary-btn {
+    background-color: #23242a;
+    color: #cbcbcb;
+    border: 1px solid #444;
+}
+
+body.dark-mode .secondary-btn:hover, body.dark-mode .secondary-btn:focus {
+    background-color: #35363c;
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+}
+
 .last-section-buffer {
     padding-bottom: 100px;
 }
@@ -390,6 +460,3 @@ body.dark-mode .image-row img {
     padding-bottom: 20px;
 }
 
-.section {
-    scroll-margin-top: 117px;
-}
