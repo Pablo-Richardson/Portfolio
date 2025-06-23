@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Ojeda Richardson</title>
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to JavaScript file -->
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Nav Bar -->
+    <nav>
+        <div class="nav-content">
+            <div class="name">
+                <!-- Title in top left (also functions as home link) -->
+                <a href="index.html">Pablo Richardson</a>
+            </div>
+            <div class="nav-links">
+                <!-- Dark mode toggle button -->
+                <button id="darkModeButton" class="darkbtn" onclick="toggleDarkMode()">Dark Mode</button>
+                <!-- Navigation links -->
+                <a href="#home">Home</a>
+                <a href="#calculator">Calculator</a>
+                <a href="#colored-path">Colored Path</a>
+                <a href="#fidget3">Fidget 3</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Home Section -->
+    <section id="home" class="section">
+        <div class="container">
+            <h1>My fidgets</h1>
+            <p>Here are some fidgets I have made with HTML, CSS and JavaScript</p>
+            <a class="rbutton" id="easterEggButton" onclick="easterEgg()">Mysterious Button</a>
+        </div>
+    </section>
+    <section id = "calculator" class = "section">
+        <div class="container">
+            <h1>Calculator</h1>
+            <div class="calculator">
+                <!-- Calculator display -->
+                <input type="text" id="display" disabled>
+                <div class="buttons">
+                    <!-- Calculator buttons -->
+                    <button onclick="clearDisplay()">C</button>
+                    <button onclick="appendToDisplay('7')">7</button>
+                    <button onclick="appendToDisplay('8')">8</button>
+                    <button onclick="appendToDisplay('9')">9</button>
+                    <button onclick="appendToDisplay('/')">/</button>
+                    <button onclick="appendToDisplay('4')">4</button>
+                    <button onclick="appendToDisplay('5')">5</button>
+                    <button onclick="appendToDisplay('6')">6</button>
+                    <button onclick="appendToDisplay('*')">*</button>
+                    <button onclick="appendToDisplay('1')">1</button>
+                    <button onclick="appendToDisplay('2')">2</button>
+                    <button onclick="appendToDisplay('3')">3</button>
+                    <button onclick="appendToDisplay('-')">-</button>
+                    <button onclick="appendToDisplay('0')">0</button>
+                    <button onclick="calculateResult()">=</button>
+                    <button onclick="appendToDisplay('+')">+</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="colored-path" class="section">
+        <div class="container">
+            <h1>Colored Path</h1>
+            <div class="calculator">
+                <div class="box-changers">
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                    <button class="colored-path-button"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class = "last-section-buffer"></section>
+</body>

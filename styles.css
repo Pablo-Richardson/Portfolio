@@ -26,6 +26,14 @@ html, body {
   }
 }
 
+button:hover, button:focus {
+    cursor: pointer;
+}
+
+a:hover, a:focus {
+    cursor:pointer;
+}
+
 nav {
     position: fixed;
     width: 100%;
@@ -96,7 +104,7 @@ nav {
     text-decoration: none;
 }
 
-#about, #results, #projects, #videos, #calculator, #screenshots {
+#about, #results, #projects, #videos, #calculator, #screenshots, #fidgets, #colored-path {
     font-size: 1.3rem;
     text-align: center;
     margin-left: 50px;
@@ -108,7 +116,7 @@ nav {
     margin-bottom: 100px;
 }
 
-#results, #projects, #videos, #calculator, #screenshots {
+#results, #projects, #videos, #calculator, #screenshots, #fidgets, #colored-path {
     margin-top: 80px;
 }
 
@@ -201,7 +209,7 @@ nav {
     box-shadow: 0 8px 32px rgba(0,0,0,0.25);
 }
 
-.calculator {
+.calculator, .colored-path {
     background: #f7f7f7;
     border-radius: 25px;
     box-shadow: 0 8px 32px rgba(0,0,0,0.18);
@@ -226,6 +234,31 @@ nav {
     padding: 0 16px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     outline: none;
+}
+
+.box-changers {
+    display: grid;
+    grid-template-columns: repeat(15, 20px);
+    grid-gap: 0px;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.colored-path-button {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: #f7f7f7;
+    color: #fff;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s, border-color 0.3s, transform 0.2s;
+    outline: none;
+}
+
+.colored-path-button:hover, .colored-path-button:focus {
+    cursor: default;
+    background: red;
+    transition: background 0s;
 }
 
 .buttons {
@@ -450,6 +483,17 @@ body.dark-mode .secondary-btn:hover, body.dark-mode .secondary-btn:focus {
     background-color: #35363c;
     color: #fff;
     box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+}
+
+body.dark-mode .colored-path-button {
+    background: #181920; 
+    color: #fff;
+}
+
+body.dark-mode .colored-path-button:hover, .colored-path-button:focus {
+    cursor: default;
+    background: red;
+    transition: background 0s;
 }
 
 .last-section-buffer {
