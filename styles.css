@@ -104,7 +104,7 @@ nav {
     text-decoration: none;
 }
 
-#about, #results, #projects, #videos, #calculator, #screenshots, #fidgets, #colored-path {
+#about, #results, #projects, #videos, #calculator, #screenshots, #colored-path {
     font-size: 1.3rem;
     text-align: center;
     margin-left: 50px;
@@ -116,7 +116,7 @@ nav {
     margin-bottom: 100px;
 }
 
-#results, #projects, #videos, #calculator, #screenshots, #fidgets, #colored-path {
+#results, #projects, #videos, #screenshots, #colored-path {
     margin-top: 80px;
 }
 
@@ -502,5 +502,19 @@ body.dark-mode .colored-path-button:hover, .colored-path-button:focus {
 
 .small-buffer{
     padding-bottom: 20px;
+}
+
+.fidgets-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
