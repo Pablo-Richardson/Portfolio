@@ -50,7 +50,7 @@ function calculateResult() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const letters = 'abcdefghijklmnoPqrstuvWxyz';
     const span = document.querySelector('#scramble_text');
     let intervalId;
     let restoreInterval;
