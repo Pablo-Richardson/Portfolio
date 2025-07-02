@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     .split("")
                     .map(letter => letters[Math.floor(Math.random() * 26)])
                     .join("");
-                if (scrambleCount >= 10) {
+                if (scrambleCount >= 20) {
                     clearInterval(intervalId);
                     let i = 0;
                     restoreInterval = setInterval(() => {
@@ -92,9 +92,9 @@ document.addEventListener('DOMContentLoaded', () => {
                             event.target.innerText = originalText;
                             animating = false;
                         }
-                    }, 60);
+                    }, 30);
                 }
-            }, 100);
+            }, 20);
         };
     }
 });
