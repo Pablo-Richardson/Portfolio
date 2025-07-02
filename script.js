@@ -27,27 +27,6 @@ function easterEgg()
     }
 }
 
-let clickCount = 1;
-const messages = ["Hello World!","Welcome to my Portfolio"]
-function changeMessage()
-{
-
-    randNum = Math.floor(Math.random() * 10);
-    if(randNum === 5)
-    {
-        document.getElementById('button_change_text').textContent = "You found an Easter Egg!";
-    }
-    else
-    {
-        document.getElementById('button_change_text').textContent = messages[clickCount];
-    }
-    clickCount ++;
-    if(clickCount === messages.length)
-    {
-        clickCount = 0;
-    }
-}
-
 function appendToDisplay(value) {
     document.getElementById('display').value += value;
 }
@@ -70,3 +49,52 @@ function calculateResult() {
     }
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const span = document.querySelector('#scramble_text');
+    let intervalId;
+    let restoreInterval;
+    let originalText = '';
+    let scrambleCount = 0;
+    let animating = false;
+
+    if (span) {
+        originalText = span.innerText;
+
+        span.onmouseover = event => {
+            if (animating) return;
+            animating = true;
+            clearInterval(intervalId);
+            clearInterval(restoreInterval);
+            scrambleCount = 0;
+            intervalId = setInterval(() => {
+                scrambleCount++;
+                event.target.innerText = event.target.innerText
+                    .split("")
+                    .map(letter => letters[Math.floor(Math.random() * 26)])
+                    .join("");
+                if (scrambleCount >= 10) {
+                    clearInterval(intervalId);
+                    let i = 0;
+                    restoreInterval = setInterval(() => {
+                        let current = event.target.innerText.split('');
+                        for (let j = 0; j < current.length; j++) {
+                            if (j <= i) {
+                                current[j] = originalText[j];
+                            } else {
+                                current[j] = letters[Math.floor(Math.random() * 26)];
+                            }
+                        }
+                        event.target.innerText = current.join('');
+                        i++;
+                        if (i >= originalText.length) {
+                            clearInterval(restoreInterval);
+                            event.target.innerText = originalText;
+                            animating = false;
+                        }
+                    }, 60);
+                }
+            }, 100);
+        };
+    }
+});
