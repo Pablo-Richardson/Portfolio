@@ -97,4 +97,171 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 20);
         };
     }
+
+    // Carousel functionality
+    initializeCarousels();
+    
+    // Initialize target-based carousels if no hash is present
+    if (!window.location.hash) {
+        // Set first slide of first carousel as active by default
+        window.location.hash = '#carousel__slide1';
+    }
 });
+
+function initializeCarousels() {
+    // Hero carousel - manual control only
+    const heroCarousel = document.getElementById('heroCarousel');
+    const heroPrev = document.getElementById('heroPrev');
+    const heroNext = document.getElementById('heroNext');
+
+    if (heroCarousel && heroPrev && heroNext) {
+        const slideWidth = 420; // Width of each slide
+        const totalSlides = heroCarousel.children.length;
+        
+        // Start from middle slide (slide 5 out of 9) IMMEDIATELY without any scrolling
+        const startSlide = Math.floor(totalSlides / 2);
+        heroCarousel.style.scrollBehavior = 'auto'; // Disable smooth scrolling initially
+        heroCarousel.scrollLeft = startSlide * slideWidth; // Set position immediately
+        
+        // Re-enable smooth scrolling after initial positioning
+        setTimeout(() => {
+            heroCarousel.style.scrollBehavior = 'smooth';
+        }, 50);
+
+        // Function to scroll to next slide
+        const scrollNext = () => {
+            const currentScroll = heroCarousel.scrollLeft;
+            const maxScroll = heroCarousel.scrollWidth - heroCarousel.clientWidth;
+            
+            if (currentScroll >= maxScroll - 10) { // Near the end, loop back to start
+                heroCarousel.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+                heroCarousel.scrollBy({ left: slideWidth, behavior: 'smooth' });
+            }
+        };
+
+        // Function to scroll to previous slide
+        const scrollPrev = () => {
+            const currentScroll = heroCarousel.scrollLeft;
+            
+            if (currentScroll <= 10) { // Near the start, loop to end
+                const maxScroll = heroCarousel.scrollWidth - heroCarousel.clientWidth;
+                heroCarousel.scrollTo({ left: maxScroll, behavior: 'smooth' });
+            } else {
+                heroCarousel.scrollBy({ left: -slideWidth, behavior: 'smooth' });
+            }
+        };
+
+        // Event listeners for buttons
+        heroPrev.addEventListener('click', () => {
+            scrollPrev();
+        });
+
+        heroNext.addEventListener('click', () => {
+            scrollNext();
+        });
+    }
+
+    // Initialize section carousels (like hero but manual control)
+    initializeSectionCarousel('internshipCarousel', 'internshipPrev', 'internshipNext');
+    initializeSectionCarousel('airshowsCarousel', 'airshowsPrev', 'airshowsNext');
+    initializeSectionCarousel('projectsCarousel', 'projectsPrev', 'projectsNext');
+
+    // Regular carousels (no auto-scroll)
+    const carousels = document.querySelectorAll('.scroll-carousel');
+    
+    carousels.forEach(carousel => {
+        const track = carousel.querySelector('.carousel__track');
+        const prevButton = carousel.querySelector('.carousel__button--prev');
+        const nextButton = carousel.querySelector('.carousel__button--next');
+
+        if (track && prevButton && nextButton) {
+            prevButton.addEventListener('click', () => {
+                track.scrollBy({ left: -320, behavior: 'smooth' });
+            });
+
+            nextButton.addEventListener('click', () => {
+                track.scrollBy({ left: 320, behavior: 'smooth' });
+            });
+
+            // Add touch/mouse wheel support
+            track.addEventListener('wheel', (e) => {
+                if (e.deltaY !== 0) {
+                    e.preventDefault();
+                    track.scrollBy({ left: e.deltaY, behavior: 'smooth' });
+                }
+            });
+        }
+    });
+}
+
+// Function to initialize section carousels (like hero but manual control)
+function initializeSectionCarousel(carouselId, prevBtnId, nextBtnId) {
+    const carousel = document.getElementById(carouselId);
+    const prevBtn = document.getElementById(prevBtnId);
+    const nextBtn = document.getElementById(nextBtnId);
+
+    if (!carousel || !prevBtn || !nextBtn) return;
+
+    let currentSlide = 0;
+    const slides = carousel.children;
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+        const translateX = -index * (100 / totalSlides);
+        carousel.style.transform = `translateX(${translateX}%)`;
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        showSlide(currentSlide);
+    }
+
+    // Set up navigation buttons
+    prevBtn.addEventListener('click', prevSlide);
+    nextBtn.addEventListener('click', nextSlide);
+
+    // Initialize first slide
+    showSlide(0);
+}
+
+// Navigation function for target-based carousels with looping
+function navigateCarousel(slideIdPrefix, totalSlides, direction, startIndex = 1) {
+    // Get current slide from URL hash or default to first slide
+    let currentSlide = startIndex;
+    
+    const currentHash = window.location.hash;
+    if (currentHash) {
+        const slideId = currentHash.substring(1); // Remove the #
+        if (slideId.startsWith(slideIdPrefix)) {
+            const slideNumber = parseInt(slideId.replace(slideIdPrefix, ''));
+            if (!isNaN(slideNumber) && slideNumber >= startIndex && slideNumber < startIndex + totalSlides) {
+                currentSlide = slideNumber;
+            }
+        }
+    }
+    
+    // Calculate next/previous slide with looping
+    let targetSlide;
+    if (direction === 1) { // Next
+        targetSlide = currentSlide + 1;
+        if (targetSlide >= startIndex + totalSlides) {
+            targetSlide = startIndex; // Loop back to first slide
+        }
+    } else { // Previous
+        targetSlide = currentSlide - 1;
+        if (targetSlide < startIndex) {
+            targetSlide = startIndex + totalSlides - 1; // Loop to last slide
+        }
+    }
+    
+    console.log(`Current: ${currentSlide}, Target: ${targetSlide}, Direction: ${direction}`); // Debug info
+    
+    // Navigate to the target slide
+    window.location.hash = '#' + slideIdPrefix + targetSlide;
+}

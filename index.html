@@ -23,21 +23,72 @@
                 <!-- Navigation links -->
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
+                <a href="#internship">Internship</a>
                 <a href="#projects">Projects</a>
-                <a href="#results">Academics</a>
+                <a href="#airshows">Airshows</a>
             </div>
         </div>
     </nav>
     <!-- Home Section -->
     <section id="home" class="section">
-        <div class="container">
-            <!-- Changes text when you click it (Includes easter egg) -->
-            <h1 id="button_change_text"><span id="scramble_text">Welcome to my Portfolio</span></h1>
-            <p>I am a student passionate about Aviation and Computer Science</p>
-            <!-- Link to resume PDF -->
-            <a href="resume.pdf" class="rbutton" target="_blank" rel="noopener noreferrer">View Resume</a>
+        <div class="hero-content">
+            <div class="container">
+                <!-- Changes text when you click it (Includes easter egg) -->
+                <h1 id="button_change_text"><span id="scramble_text">Welcome to my Portfolio</span></h1>
+                <p>I am a student passionate about Aviation and Computer Science</p>
+                <!-- Link to resume PDF -->
+                <a href="resume.pdf" class="rbutton" target="_blank" rel="noopener noreferrer">View Resume</a>
+            </div>
+        </div>
+        
+        <!-- Hero Carousel -->
+        <div class="hero-carousel-container">
+            <div class="hero-carousel">
+                <div class="hero-carousel__track" id="heroCarousel">
+                    <div class="hero-carousel__slide">
+                        <img src="screenshot1.jpg" alt="F-15QA at RIAT 2024" class="hero-carousel__image">
+                        <div class="hero-carousel__caption">F-15QA at RIAT 2024</div>
+                    </div>
+                    <div class="hero-carousel__slide">
+                        <img src="screenshot2.jpg" alt="Eurofighter at RIAT 2024" class="hero-carousel__image">
+                        <div class="hero-carousel__caption">Eurofighter at RIAT 2024</div>
+                    </div>
+                    <div class="hero-carousel__slide">
+                        <img src="screenshot3.png" alt="F/A-18C at RIAT 2025" class="hero-carousel__image">
+                        <div class="hero-carousel__caption">F/A-18C at RIAT 2025</div>
+                    </div>
+                    <div class="hero-carousel__slide">
+                        <img src="screenshot4.jpg" alt="C-130E Cockpit" class="hero-carousel__image">
+                        <div class="hero-carousel__caption">C-130E Cockpit I was allowed in</div>
+                    </div>
+                    <div class="hero-carousel__slide">
+                        <img src="screenshot5.jpg" alt="B-1B Cockpit" class="hero-carousel__image">
+                        <div class="hero-carousel__caption">B-1B Cockpit I was allowed in</div>
+                    </div>
+                    <div class="hero-carousel__slide">
+                        <img src="first_uptime_check.jpg" alt="First Uptime Check" class="hero-carousel__image">
+                        <div class="hero-carousel__caption">My first Uptime Check implementation</div>
+                    </div>
+                    <div class="hero-carousel__slide">
+                        <img src="improved_uptime_check.jpg" alt="Improved Uptime Check" class="hero-carousel__image">
+                        <div class="hero-carousel__caption">My improved Uptime Check system</div>
+                    </div>
+                    <div class="hero-carousel__slide">
+                        <img src="first_alert.jpg" alt="First Alert" class="hero-carousel__image">
+                        <div class="hero-carousel__caption">My first Alert system</div>
+                    </div>
+                    <div class="hero-carousel__slide">
+                        <img src="uptime_checks_in_action.jpg" alt="Uptime Checks Action" class="hero-carousel__image">
+                        <div class="hero-carousel__caption">Uptime monitoring system in action</div>
+                    </div>
+                </div>
+                <button class="hero-carousel__button hero-carousel__button--prev" id="heroPrev" aria-label="Previous slide">‹</button>
+                <button class="hero-carousel__button hero-carousel__button--next" id="heroNext" aria-label="Next slide">›</button>
+            </div>
         </div>
     </section>
+    
+    <!-- Interactive Fidgets Section -->
     <section id="fidgets-row" class="section">
         <div class="fidgets-flex">
             <div class="calculator">
@@ -298,105 +349,145 @@
             </section>
         </div>
     </section>
+
     <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
             <h1>About Me</h1>
-            <section id="screenshots" class="section">
-                <div class="container">
-                    <p>My photos from my hobbies and experiences</p>
-                    <div class="image-row">
-                        <figure>
-                            <img src="screenshot1.jpg" alt="Screenshot 1">
-                            <figcaption>F-15QA at RIAT 2024</figcaption>
-                        </figure>
-                        <figure>
-                          <img src="screenshot2.jpg" alt="Screenshot 2">
-                          <figcaption>Eurofighter at RIAT 2024</figcaption>
-                        </figure>
+            <div class="about-content">
+                <p>Write short description about myself here</p>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <h3>Education</h3>
+                        <p>WRITE HERE WRITE HERE</p>
                     </div>
-                    <div class="image-row">
-                        <figure>
-                            <img src="screenshot3.png" alt="Screenshot 1">
-                            <figcaption>F/A-18C at RIAT 2025</figcaption>
-                        </figure>
-                        <figure>
-                          <img src="screenshot4.jpg" alt="Screenshot 2">
-                          <figcaption>C-130E Cockpit I was allowed in</figcaption>
-                        </figure>
+                    <div class="about-card">
+                        <h3>Interests</h3>
+                        <p>Aviation, Programming, Flight Simulation, Airshow Photography</p>
                     </div>
-                    <div class="image-row">
-                        <figure>
-                            <img src="screenshot5.jpg" alt="Screenshot 1">
-                            <figcaption>B-1B Cockpit I was allowed in</figcaption>
-                        </figure>
-                        <figure>
-                          <img src="screenshot2.jpg" alt="Screenshot 2">
-                          <figcaption>Eurofighter at RIAT 2024</figcaption>
-                        </figure>
+                    <div class="about-card">
+                        <h3>Skills</h3>
+                        <p>JavaScript, Python, C++, Terraform, Web Development and Infrastructure</p>
                     </div>
                 </div>
-            </section>
-        </div>
-        <section id="small-buffer" class="small-buffer"></section>
-        <div class="container">
-            <a href="about.html" class="secondary-btn">Click to learn more</a>
+            </div>
+            <a href="about.html" class="secondary-btn">Learn More About Me</a>
         </div>
     </section>
-    <!-- Projects Section -->
+
+    <!-- Internship Gallery Section -->
+    <section id="internship" class="section">
+        <div class="container">
+            <h1>Internship Experience</h1>
+            <p>Photos and experiences from my internship</p>
+            
+            <div class="section-carousel-container">
+                <div class="section-carousel">
+                    <div class="section-carousel__track" id="internshipCarousel">
+                        <div class="section-carousel__slide">
+                            <img src="first_uptime_check.jpg" alt="First Uptime Check" class="section-carousel__image">
+                            <div class="section-carousel__caption">My first Uptime Check implementation</div>
+                        </div>
+                        <div class="section-carousel__slide">
+                            <img src="improved_uptime_check.jpg" alt="Improved Uptime Check" class="section-carousel__image">
+                            <div class="section-carousel__caption">My improved Uptime Check system</div>
+                        </div>
+                        <div class="section-carousel__slide">
+                            <img src="first_alert.jpg" alt="First Alert" class="section-carousel__image">
+                            <div class="section-carousel__caption">My first Alert system</div>
+                        </div>
+                        <div class="section-carousel__slide">
+                            <img src="uptime_checks_in_action.jpg" alt="Uptime Checks in Action" class="section-carousel__image">
+                            <div class="section-carousel__caption">Uptime Checks running in production</div>
+                        </div>
+                        <div class="section-carousel__slide">
+                            <img src="screenshot1.jpg" alt="Project Demo" class="section-carousel__image">
+                            <div class="section-carousel__caption">Front end tests</div>
+                        </div>
+                    </div>
+                    <button class="section-carousel__button section-carousel__button--prev" id="internshipPrev" aria-label="Previous slide">‹</button>
+                    <button class="section-carousel__button section-carousel__button--next" id="internshipNext" aria-label="Next slide">›</button>
+                </div>
+            </div>
+            <a href="projects.html" class="secondary-btn">View All Projects</a>
+        </div>
+    </section>
+
+    <!-- Projects Gallery Section -->
     <section id="projects" class="section">
         <div class="container">
-            <h1>Projects & Experience</h1>
-            <section id="screenshots" class="section">
-                <div class="container">
-                    <p>Some photos from my Projects and Work Experience</p>
-                    <div class="image-row">
-                        <figure>
-                            <img src="first_uptime_check.jpg" alt="First Uptime Check">
-                            <figcaption>My first Uptime Check</figcaption>
-                        </figure>
-                        <figure>
-                          <img src="improved_uptime_check.jpg" alt="Improved Uptime Check">
-                          <figcaption>My improved Uptime Check</figcaption>
-                        </figure>
+            <h1>Personal Projects</h1>
+            <p>Documentation and screenshots from my personal development projects</p>
+            
+            <div class="section-carousel-container">
+                <div class="section-carousel">
+                    <div class="section-carousel__track" id="projectsCarousel">
+                        <div class="section-carousel__slide">
+                            <img src="first_alert.jpg" alt="Web Portfolio" class="section-carousel__image">
+                            <div class="section-carousel__caption">DCS Modding Guide</div>
+                        </div>
+                        <div class="section-carousel__slide">
+                            <img src="screenshot1.jpg" alt="Calculator App" class="section-carousel__image">
+                            <div class="section-carousel__caption">DCS C-2A Mod in game for the first time</div>
+                        </div>
+                        <div class="section-carousel__slide">
+                            <img src="screenshot2.jpg" alt="Aviation Database" class="section-carousel__image">
+                            <div class="section-carousel__caption">DCS C-2A Mod flight model code</div>
+                        </div>
+                        <div class="section-carousel__slide">
+                            <img src="screenshot3.png" alt="Flight Tracker" class="section-carousel__image">
+                            <div class="section-carousel__caption">DCS C-2A Lua code</div>
+                        </div>
+                        <div class="section-carousel__slide">
+                            <img src="screenshot4.jpg" alt="Weather API" class="section-carousel__image">
+                            <div class="section-carousel__caption">Portfolio Website</div>
+                        </div>
                     </div>
-                    <div class="image-row">
-                        <figure>
-                            <img src="first_alert.jpg" alt="First Alert">
-                            <figcaption>My first Alert</figcaption>
-                        </figure>
-                        <figure>
-                          <img src="uptime_checks_in_action.jpg" alt="Uptime Checks in Action">
-                          <figcaption>Uptime Checks in Action</figcaption>
-                        </figure>
-                    </div>
-                    <div class="image-row">
-                        <figure>
-                            <img src="screenshot1.jpg" alt="Screenshot 1">
-                            <figcaption>F-15QA at RIAT 2024</figcaption>
-                        </figure>
-                        <figure>
-                          <img src="screenshot2.jpg" alt="Screenshot 2">
-                          <figcaption>Eurofighter at RIAT 2024</figcaption>
-                        </figure>
-                    </div>
-                    <div class="image-row">
-                        <figure>
-                            <img src="screenshot1.jpg" alt="Screenshot 1">
-                            <figcaption>F-15QA at RIAT 2024</figcaption>
-                        </figure>
-                        <figure>
-                          <img src="screenshot2.jpg" alt="Screenshot 2">
-                          <figcaption>Eurofighter at RIAT 2024</figcaption>
-                        </figure>
-                    </div>
+                    <button class="section-carousel__button section-carousel__button--prev" id="projectsPrev" aria-label="Previous slide">‹</button>
+                    <button class="section-carousel__button section-carousel__button--next" id="projectsNext" aria-label="Next slide">›</button>
                 </div>
-            </section>
+            </div>
+            <a href="projects.html" class="secondary-btn">View All Projects</a>
         </div>
-        <section id="small-buffer" class="small-buffer"></section>
+    </section>
+
+    <!-- Airshows Gallery Section -->
+    <section id="airshows" class="section">
         <div class="container">
-            <a href="projects.html" class="secondary-btn">Click to learn more</a>
+            <h1>Airshow Photography</h1>
+            <p>Photos from airshows I've attended</p>
+            
+            <div class="section-carousel-container">
+                <div class="section-carousel">
+                    <div class="section-carousel__track" id="airshowsCarousel">
+                        <div class="section-carousel__slide">
+                            <img src="screenshot1.jpg" alt="F-15QA at RIAT 2024" class="section-carousel__image">
+                            <div class="section-carousel__caption">F-15QA at RIAT 2024</div>
+                        </div>
+                        <div class="section-carousel__slide">
+                            <img src="screenshot2.jpg" alt="Eurofighter at RIAT 2024" class="section-carousel__image">
+                            <div class="section-carousel__caption">Eurofighter at RIAT 2024</div>
+                        </div>
+                        <div class="section-carousel__slide">
+                            <img src="screenshot3.png" alt="F/A-18C at RIAT 2025" class="section-carousel__image">
+                            <div class="section-carousel__caption">F/A-18C at RIAT 2025</div>
+                        </div>
+                        <div class="section-carousel__slide">
+                            <img src="screenshot4.jpg" alt="C-130E Cockpit I was allowed in" class="section-carousel__image">
+                            <div class="section-carousel__caption">C-130E Cockpit I was allowed in</div>
+                        </div>
+                        <div class="section-carousel__slide">
+                            <img src="screenshot5.jpg" alt="B-1B Cockpit I was allowed in" class="section-carousel__image">
+                            <div class="section-carousel__caption">B-1B Cockpit I was allowed in</div>
+                        </div>
+                    </div>
+                    <button class="section-carousel__button section-carousel__button--prev" id="airshowsPrev" aria-label="Previous slide">‹</button>
+                    <button class="section-carousel__button section-carousel__button--next" id="airshowsNext" aria-label="Next slide">›</button>
+                </div>
+            </div>
         </div>
+    </section>
+
     <!-- Videos Section -->
     <section id="videos" class="section">
         <h1>My Videos</h1>
